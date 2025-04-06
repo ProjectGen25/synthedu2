@@ -3,24 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SynthEDU</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SynthEDU - The Future of Learning</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <!-- Hamburger Menu Icon (Image) -->
-    <div class="hamburger-menu" onclick="toggleMenu()">
-        <img src="https://cdn.discordapp.com/attachments/1323894018752647220/1358563595499340007/image-removebg-preview.png?ex=67f44c72&is=67f2faf2&hm=8b3dc71d9c8512ed5adb7d2d272f8ad611cbc1c084561d338039e6e2501f90fa" alt="Hamburger Icon" width="40" height="40">
-    </div>
-
-    <!-- Side Navigation -->
-    <div id="sideMenu" class="side-menu">
-        <ul>
-            <li><a href="games.html">Links</a></li>
-            <li><a href="proxy.html">Proxy</a></li>
-            <li><a href="javascript:void(0)" onclick="openChat()">Chat</a></li>
-        </ul>
-    </div>
 
     <!-- Header Section -->
     <header>
@@ -28,13 +15,20 @@
             <h1>SynthEDU</h1>
             <p>The Future of Learning</p>
         </div>
+        <nav>
+            <ul>
+                <li><a href="games.html">Links</a></li>
+                <li><a href="proxy.html">Proxy</a></li>
+                <li><a href="#" onclick="openChat()">Chat</a></li>
+            </ul>
+        </nav>
     </header>
 
     <!-- Main Content Section -->
     <main>
         <section id="games">
-            <h2>Links</h2>
-            <p>Explore fun and educational resources!</p>
+            <h2>Educational Tools</h2>
+            <p>Explore our fun and interactive learning tools!</p>
         </section>
 
         <section id="proxy">
@@ -45,16 +39,22 @@
 
         <section id="chat">
             <h2>Chat</h2>
-            <p>Connect with your peers on our chat platform.</p>
-            <button onclick="window.open('https://projectgen25.github.io/ggplusai', '_blank', 'width=600,height=400')">Start Chat</button>
+            <p>Connect with your peers and chat with the community. Stay updated, stay informed!</p>
+            <button onclick="openChat()">Start Chat</button>
         </section>
     </main>
 
     <!-- Footer Section -->
     <footer>
         <p>&copy; 2025 SynthEDU. All rights reserved.</p>
+        <p><a href="https://discord.gg/Yut8yVcwPc" target="_blank">Discord</a></p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        function openChat() {
+            window.open('https://projectgen25.github.io/ggplusai', '_blank', 'width=600,height=400');
+        }
+    </script>
+
 </body>
 </html>
