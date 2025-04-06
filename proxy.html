@@ -4,73 +4,61 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SynthEDU Proxy</title>
+  <link rel="stylesheet" href="styles.css">
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-    }
-
-    header {
-      background-color: #000;
-      color: #fff;
-      padding: 20px;
+      background-color: #f2f2f2;
       text-align: center;
     }
 
     .container {
-      padding: 30px;
-      text-align: center;
+      margin-top: 50px;
     }
 
-    .proxy-box {
-      background-color: #007BFF;
-      padding: 25px;
+    .box {
+      background-color: #cce4ff;
+      padding: 20px;
       border-radius: 8px;
-      max-width: 900px;
-      margin: 0 auto 30px;
+      display: inline-block;
+      width: 80%;
+      max-width: 600px;
     }
 
-    .proxy-box input[type="text"] {
-      width: 100%;
-      padding: 12px;
+    input[type="text"] {
+      width: 90%;
+      padding: 10px;
       border: none;
-      border-radius: 5px;
+      border-radius: 4px;
       font-size: 16px;
     }
 
-    iframe {
-      width: 100%;
-      height: 600px;
-      border: none;
-      display: none;
+    footer {
+      margin-top: 60px;
+    }
+
+    .logo {
       margin-top: 20px;
     }
 
-    footer {
-      text-align: center;
-      padding: 15px;
-      background-color: #000;
-      color: #fff;
-    }
-
-    footer a {
-      color: #4a90e2;
-      text-decoration: none;
+    .logo img {
+      height: 80px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>SynthEDU Proxy</h1>
-    <p>The future of learning</p>
-  </header>
+
+  <div class="logo">
+    <img src="https://cdn.discordapp.com/attachments/1323894018752647220/1358530031995064400/Screenshot_2025-04-06_155304.png?ex=67f42d2f&is=67f2dbaf&hm=12605f232acd42279fc338e08f987cbf795761c6b2031f47c458dbe575fb4016&format=webp&quality=lossless&width=423&height=421" alt="SynthEDU Logo">
+  </div>
 
   <div class="container">
-    <div class="proxy-box">
+    <h1>SynthEDU Proxy</h1>
+    <p>The future of learning</p>
+
+    <div class="box">
       <input type="text" id="urlInput" placeholder="Enter your URL:" onfocus="this.placeholder=''" />
     </div>
-    <iframe id="proxyFrame"></iframe>
   </div>
 
   <footer>
@@ -79,18 +67,15 @@
 
   <script>
     const input = document.getElementById('urlInput');
-    const frame = document.getElementById('proxyFrame');
-
     input.addEventListener('keydown', function (e) {
       if (e.key === 'Enter') {
-        const rawURL = input.value.trim();
-        if (rawURL) {
-          const encoded = btoa(rawURL);
-          frame.src = `https://great-dulcia-ggplus-6f9455be.koyeb.app/uv/service/${encoded}`;
-          frame.style.display = 'block';
+        const encoded = encodeURIComponent(input.value.trim());
+        if (encoded) {
+          window.location.href = `https://great-dulcia-ggplus-6f9455be.koyeb.app/uv/service/${encoded}`;
         }
       }
     });
   </script>
+
 </body>
 </html>
