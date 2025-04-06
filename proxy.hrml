@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SynthEDU Proxy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .container {
+            width: 60%;
+            margin: 0 auto;
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .proxy-box {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .input-box {
+            background-color: #007bff;
+            padding: 15px;
+            border-radius: 5px;
+            color: white;
+            font-size: 18px;
+            width: 80%;
+            margin-top: 20px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 15px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        footer p {
+            color: #555;
+        }
+
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>SynthEDU Proxy</h1>
+        <div class="proxy-box">
+            <p>The Future of Learning</p>
+        </div>
+
+        <div class="input-box">
+            <p>Enter your URL:</p>
+            <input type="text" id="url" placeholder="Enter URL here..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter URL here...'" />
+            <button onclick="openProxy()">Start Proxy</button>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 SynthEDU. All rights reserved.</p>
+        <p>Join us on Discord: 
+            <a href="https://discord.gg/Yut8yVcwPc" target="_blank">Discord</a>
+        </p>
+    </footer>
+
+    <script>
+        function openProxy() {
+            const url = document.getElementById('url').value;
+            if (url) {
+                // Open the URL through the Ultraviolet proxy service
+                const proxyURL = `https://great-dulcia-ggplus-6f9455be.koyeb.app/?url=${encodeURIComponent(url)}`;
+                window.location.href = proxyURL;
+            } else {
+                alert('Please enter a valid URL.');
+            }
+        }
+    </script>
+</body>
+</html>
