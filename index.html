@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SynthEDU - The Future of Learning</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -16,9 +17,9 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#games">Games</a></li>
+                <li><a href="games.html">Links</a></li>
                 <li><a href="proxy.html">Proxy</a></li>
-                <li><a href="#chat">Chat</a></li>
+                <li><a href="#" onclick="openChat()">Chat</a></li>
             </ul>
         </nav>
     </header>
@@ -26,13 +27,8 @@
     <!-- Main Content Section -->
     <main>
         <section id="games">
-            <h2>Educational Games</h2>
-            <p>Explore our fun and interactive games to learn new concepts!</p>
-            <div class="game-links">
-                <a href="game1.html">Math Master</a>
-                <a href="game2.html">History Quiz</a>
-                <a href="game3.html">Science Adventure</a>
-            </div>
+            <h2>Educational Tools</h2>
+            <p>Explore our fun and interactive learning tools!</p>
         </section>
 
         <section id="proxy">
@@ -44,17 +40,21 @@
         <section id="chat">
             <h2>Chat</h2>
             <p>Connect with your peers and chat with the community. Stay updated, stay informed!</p>
-            <button onclick="window.location.href='chat.html'">Start Chat</button>
+            <button onclick="openChat()">Start Chat</button>
         </section>
     </main>
 
     <!-- Footer Section -->
     <footer>
         <p>&copy; 2025 SynthEDU. All rights reserved.</p>
-        <p>Join us on Discord: 
-            <a href="https://discord.gg/Yut8yVcwPc" target="_blank">Discord</a>
-        </p>
+        <p><a href="https://discord.gg/Yut8yVcwPc" target="_blank">Discord</a></p>
     </footer>
+
+    <script>
+        function openChat() {
+            window.open('https://projectgen25.github.io/ggplusai', '_blank', 'width=600,height=400');
+        }
+    </script>
 
 </body>
 </html>
