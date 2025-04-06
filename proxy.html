@@ -3,78 +3,101 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SynthEDU Proxy</title>
+  <title>SynthEDU UV</title>
   <link rel="stylesheet" href="styles.css">
   <style>
     body {
       font-family: Arial, sans-serif;
       background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
       text-align: center;
     }
 
-    .container {
-      margin-top: 50px;
+    header {
+      background-color: #2d2d2d;
+      padding: 15px;
+      color: white;
+      font-size: 24px;
     }
 
-    .box {
-      background-color: #cce4ff;
-      padding: 20px;
-      border-radius: 8px;
-      display: inline-block;
-      width: 80%;
-      max-width: 600px;
-    }
-
-    input[type="text"] {
-      width: 90%;
-      padding: 10px;
-      border: none;
-      border-radius: 4px;
-      font-size: 16px;
-    }
-
-    footer {
+    main {
       margin-top: 60px;
     }
 
-    .logo {
-      margin-top: 20px;
+    h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
     }
 
-    .logo img {
-      height: 80px;
+    .search-container {
+      margin-top: 30px;
+    }
+
+    #searchBar {
+      width: 70%;
+      max-width: 700px;
+      padding: 15px 20px;
+      font-size: 18px;
+      border: 2px solid #999;
+      border-radius: 8px;
+      outline: none;
+    }
+
+    #searchBar:focus {
+      border-color: #444;
+    }
+
+    p {
+      font-size: 18px;
+      color: #444;
     }
   </style>
 </head>
 <body>
 
-  <div class="logo">
-    <img src="https://cdn.discordapp.com/attachments/1323894018752647220/1358530031995064400/Screenshot_2025-04-06_155304.png?ex=67f42d2f&is=67f2dbaf&hm=12605f232acd42279fc338e08f987cbf795761c6b2031f47c458dbe575fb4016&format=webp&quality=lossless&width=423&height=421" alt="SynthEDU Logo">
-  </div>
-
-  <div class="container">
-    <h1>SynthEDU Proxy</h1>
-    <p>The future of learning</p>
-
-    <div class="box">
-      <input type="text" id="urlInput" placeholder="Enter your URL:" onfocus="this.placeholder=''" />
+  <header>
+    <div class="left-title">Welcome to SynthEDU's Proxy!</div>
+  </header>
+  
+  <main>
+    <h1>SynthEDU+</h1>
+    <p>Unblock the fun, anywhere.</p>
+    <div class="search-container">
+      <input type="text" placeholder="Search or enter a URL..." id="searchBar" onkeypress="handleKeyPress(event)">
     </div>
-  </div>
-
-  <footer>
-    <p><a href="https://discord.gg/Yut8yVcwPc" target="_blank">Discord</a></p>
-  </footer>
+  </main>
 
   <script>
-    const input = document.getElementById('urlInput');
-    input.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter') {
-        const encoded = encodeURIComponent(input.value.trim());
-        if (encoded) {
-          window.location.href = `https://great-dulcia-ggplus-6f9455be.koyeb.app/uv/service/${encoded}`;
-        }
+    function handleKeyPress(event) {
+      if (event.key === "Enter") {
+        openFullscreenSite();
       }
-    });
+    }
+
+    function openFullscreenSite() {
+      var url = document.getElementById("searchBar").value;
+      if (!url.startsWith("http")) {
+        url = "https://" + url;
+      }
+      
+      var newTab = window.open();
+      newTab.document.write(`
+        <html>
+        <head>
+          <title>Loading...</title>
+          <style>
+            body { margin: 0; background: black; display: flex; justify-content: center; align-items: center; height: 100vh; }
+            iframe { width: 100%; height: 100%; border: none; }
+          </style>
+        </head>
+        <body>
+          <iframe src="${url}"></iframe>
+        </body>
+        </html>
+      `);
+      newTab.document.close();
+    }
   </script>
 
 </body>
