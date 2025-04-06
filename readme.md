@@ -1,4 +1,6 @@
 # Deployment Instructions for SynthEDU
+## If you make a repo, please star ours!
+### Note: Most code files have notes inside it in-case you would like to code something like it. SynthEDU disapproves of any modified versions and will use their right to take down any repos
 
 This guide will walk you through deploying your SynthEDU project to Koyeb, Vercel, and Hop.sh.
 
