@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="styles.css">
 
     <script>
-        window.onload = function() {
-            // Opens the chat page in a popup when the page loads
+        // Function to open the chat in a popup when the button is clicked
+        function openChat() {
             window.open('https://projectgen25.github.io/ggplusai', '_blank', 'width=600,height=400');
-        };
+        }
     </script>
 </head>
 <body>
@@ -26,7 +26,7 @@
             <ul>
                 <li><a href="#games">Games</a></li>
                 <li><a href="#proxy">Proxy</a></li>
-                <li><a href="#chat">GG+ Chat</a></li>
+                <li><a href="#chat" onclick="openChat()">GG+ Chat</a></li> <!-- Updated to trigger openChat() on click -->
             </ul>
         </nav>
     </header>
@@ -52,7 +52,7 @@
         <section id="chat">
             <h2>GG+ Chat</h2>
             <p>Connect with your peers and chat with the community on GG+ Chat. Stay updated, stay informed!</p>
-            <button onclick="window.location.href='chat.html'">Start Chat</button>
+            <button onclick="openChat()">Start Chat</button> <!-- Open chat popup on click -->
         </section>
     </main>
 
