@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SynthEDU - The Future of Learning</title>
+    <title>SynthEDU</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,20 +19,49 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="games.html">Links</a></li>
                 <li><a href="proxy.html">Proxy</a></li>
-                <li><a href="chat.html">Chat</a></li>
+                <li><a href="#" onclick="openChat()">Chat</a></li> <!-- Updated Chat button -->
             </ul>
         </nav>
     </header>
 
     <!-- Main Content Section -->
     <main>
-        <section id="welcome">
-            <h2>Welcome to SynthEDU</h2>
-            <p>Your gateway to innovative learning tools and resources.</p>
+        <section id="links">
+            <h2>Links</h2>
+            <p>Check out these resources powered by SynthEDU.</p>
+            <div class="game-links">
+                <a href="https://gitgamesplus.carrd.co" target="_blank">GitGames+</a>
+                <a href="#" onclick="openInterstellar()">Interstellar</a>
+            </div>
         </section>
     </main>
 
-    <!-- Footer Section -->
+    <script>
+        function openInterstellar() {
+            var newTab = window.open();
+            newTab.document.write(`
+                <html>
+                <head>
+                    <title>Loading Interstellar...</title>
+                    <style>
+                        body { margin: 0; background: black; display: flex; justify-content: center; align-items: center; height: 100vh; }
+                        iframe { width: 100%; height: 100%; border: none; }
+                    </style>
+                </head>
+                <body>
+                    <iframe src="https://gointerstellar.app"></iframe>
+                </body>
+                </html>
+            `);
+            newTab.document.close();
+        }
+
+        function openChat() {
+            window.open("https://projectgen25.github.io/ggplusai", "_blank");  <!-- Opens Chat in a new window -->
+        }
+    </script>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 SynthEDU. All rights reserved.</p>
         <p><a href="https://discord.gg/Yut8yVcwPc" target="_blank">Discord</a></p>
