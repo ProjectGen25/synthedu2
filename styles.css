@@ -1,117 +1,89 @@
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
-
+/* Header */
 header {
-    background-color: #4a90e2;
+    background-color: #333;
     color: white;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
 }
 
-header .logo h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-
-header .logo p {
-    font-size: 1.2rem;
+header .logo {
+    font-size: 2rem;
 }
 
 
-nav ul {
-    list-style: none;
-    padding: 10px 0;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
     color: white;
-    font-size: 1.2rem;
-    padding: 5px 15px;
-    border-radius: 5px;
+    transition: left 0.3s ease;
+    padding-top: 60px;
 }
 
-nav ul li a:hover {
-    background-color: #005BB5;
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-menu ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+.side-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+
+.hamburger-menu {
+    font-size: 30px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 1;
 }
 
 
 main {
     padding: 20px;
-    text-align: center;
 }
 
-section h2 {
-    color: #4a90e2;
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+h2 {
+    color: #333;
 }
 
-section p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-.game-links a {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 10px;
-    background-color: #007BFF;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.game-links a:hover {
-    background-color: #005BB5;
-}
 
 button {
-    background-color: #007BFF;
-    padding: 10px 20px;
+    padding: 10px;
+    background-color: #333;
     color: white;
     border: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
+    cursor: pointer;
 }
 
 button:hover {
-    background-color: #005BB5;
+    background-color: #555;
 }
 
 
 footer {
+    text-align: center;
     background-color: #333;
     color: white;
-    padding: 10px 0;
-    text-align: center;
-}
-
-footer p {
-    font-size: 1rem;
-}
-
-footer a {
-    color: #4a90e2;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
+    padding: 10px;
 }
