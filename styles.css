@@ -1,11 +1,11 @@
-/* General Reset */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styling */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
@@ -13,7 +13,7 @@ body {
     line-height: 1.6;
 }
 
-/* Header Section */
+
 header {
     background-color: #4a90e2;
     color: white;
@@ -30,7 +30,7 @@ header .logo p {
     font-size: 1.2rem;
 }
 
-/* Navigation */
+
 nav ul {
     list-style: none;
     padding: 10px 0;
@@ -51,7 +51,7 @@ nav ul li a:hover {
     background-color: #005BB5;
 }
 
-/* Main Section */
+
 main {
     padding: 20px;
     text-align: center;
@@ -95,7 +95,7 @@ button:hover {
     background-color: #005BB5;
 }
 
-/* Footer */
+
 footer {
     background-color: #333;
     color: white;
