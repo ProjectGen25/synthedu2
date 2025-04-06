@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SynthEDU - Links</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SynthEDU - Educational Tools</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -17,7 +18,6 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="games.html">Links</a></li>
                 <li><a href="proxy.html">Proxy</a></li>
                 <li><a href="chat.html">Chat</a></li>
             </ul>
@@ -28,40 +28,30 @@
     <main>
         <section id="links">
             <h2>Links</h2>
-            <p>Check out these resources powered by SynthEDU.</p>
-            <div class="game-links">
-                <a href="https://gitgamesplus.carrd.co" target="_blank">GitGames+</a>
-                <a href="#" onclick="openInterstellar()">Interstellar</a>
+            <p>Explore the following educational platforms:</p>
+            <div class="link-buttons">
+                <a href="https://gitgamesplus.carrd.co" target="_blank">GitGames+</a> <!-- GitGames+ Link -->
+                <button onclick="openInterstellar()">Interstellar</button> <!-- Interstellar Link -->
+                <button onclick="openUtopia()">Utopia</button> <!-- Utopia Link -->
             </div>
         </section>
     </main>
 
-    <script>
-        function openInterstellar() {
-            var newTab = window.open();
-            newTab.document.write(`
-                <html>
-                <head>
-                    <title>Loading Interstellar...</title>
-                    <style>
-                        body { margin: 0; background: black; display: flex; justify-content: center; align-items: center; height: 100vh; }
-                        iframe { width: 100%; height: 100%; border: none; }
-                    </style>
-                </head>
-                <body>
-                    <iframe src="https://gointerstellar.app"></iframe>
-                </body>
-                </html>
-            `);
-            newTab.document.close();
-        }
-    </script>
-
-    <!-- Footer -->
+    <!-- Footer Section -->
     <footer>
         <p>&copy; 2025 SynthEDU. All rights reserved.</p>
         <p><a href="https://discord.gg/Yut8yVcwPc" target="_blank">Discord</a></p>
     </footer>
+
+    <script>
+        function openInterstellar() {
+            window.open('https://gointerstellar.app', '_blank', 'width=600,height=400');
+        }
+
+        function openUtopia() {
+            window.open('https://utopiaweb.org', '_blank', 'width=600,height=400');
+        }
+    </script>
 
 </body>
 </html>
