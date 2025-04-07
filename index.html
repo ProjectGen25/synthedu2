@@ -7,16 +7,30 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <!-- Header Section -->
     <header>
         <div class="logo">
             <h1>SynthEDU</h1>
             <p>The Future of Learning</p>
         </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="games.html">Links</a></li>
+                <li><a href="proxy.html">Proxy</a></li>
+                <li><a href="#" onclick="openChat()">Chat</a></li>
+            </ul>
+        </nav>
     </header>
 
+    <!-- Main Content Section -->
     <main>
         <section id="cta">
-            <h3>Explore Our Features</h3>
+            <h3>Welcome to SynthEDU!</h3>
+            <p>Explore the future of learning with interactive tools, resources, and more.</p>
+            <p><strong>Version:</strong> 1.0</p>
+            <p><strong>Credits:</strong> Tragicfrn</p>
             <div class="button-container">
                 <a href="games.html" class="button">Explore Games</a>
                 <a href="proxy.html" class="button">Start Proxy</a>
@@ -25,9 +39,32 @@
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 SynthEDU. All rights reserved.</p>
         <p><a href="https://discord.gg/Yut8yVcwPc" target="_blank">Discord</a></p>
     </footer>
+
+    <script>
+        function openChat() {
+            var newTab = window.open();
+            newTab.document.write(`
+                <html>
+                <head>
+                    <title>Loading Chat...</title>
+                    <style>
+                        body { margin: 0; background: black; display: flex; justify-content: center; align-items: center; height: 100vh; }
+                        iframe { width: 100%; height: 100%; border: none; }
+                    </style>
+                </head>
+                <body>
+                    <iframe src="https://projectgen25.github.io/ggplusai"></iframe>
+                </body>
+                </html>
+            `);
+            newTab.document.close();
+        }
+    </script>
+
 </body>
 </html>
